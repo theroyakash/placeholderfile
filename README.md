@@ -1,5 +1,5 @@
 # Placeholder file
-Placholder file name generator. Generates placholder name with any prefix or suffix.
+Fed up coming up names for your files? Placholder file name generator is your solution. Generates placholder name with any prefix or suffix.
 ## How to use
 ### Installation
 Open your terminal and pip install this library like `pip install https://github.com/theroyakash/placeholderfile/tarball/main`
