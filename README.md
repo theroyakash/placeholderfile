@@ -27,3 +27,31 @@ video_vbpvbvpyhv_2.mp4
 video_olxffcxayv_3.mp4
 video_fmopkmtpqg_4.mp4
 ```
+### Practical Example
+AKDPRFramework has a built in image downloader module. When downloading image using same name for the image file can create conflict and overwrite the previously dowloaded image. So making a random name for image everytime is a good practice.
+
+Here is an example how AKDPRFramework implements this module
+```python
+# Genearting a new name for each file downloaded.
+from placeholderfile.generateName import generateName as gn
+
+# Download image from the WEB
+import requests
+from PIL import Image
+import io
+import os
+import sys
+
+def downloadImageFromURL(url):
+    '''
+    Downloads Image from any image URL
+    To know more about what are image URL visit here: https://bit.ly/what-are-imageurl
+    '''
+    b = requests.get(url).content
+    image = Image.open(io.BytesIO(b))
+
+    # Generate a new name for every new image file generated
+    filename = gn(suffix='.jpg', prefix=None, seed=None)
+    image.save(filename)
+    print(f'Image saved at {os.getcwd()}/{filename}')
+```
