@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+placeholderfile/__init__.py
+placeholderfile/generateName.py
+placeholderfile.egg-info/PKG-INFO
+placeholderfile.egg-info/SOURCES.txt
+placeholderfile.egg-info/dependency_links.txt
+placeholderfile.egg-info/top_level.txt
