@@ -55,3 +55,16 @@ def downloadImageFromURL(url):
     image.save(filename)
     print(f'Image saved at {os.getcwd()}/{filename}')
 ```
+
+# UUID Generator
+placeholderfile can now generate UUIDs for databases.
+
+To be able to generate random 22 character length UUIDs use the following code:
+```python
+from placeholderfile.UUIDGenerator import UUIDGenerator
+
+generator = UUIDGenerator(dtype='str-major')    # You can choose also 'int-major' for generating integer dominant UUID
+uuid = generator.generate()
+
+print(uuid)
+```
